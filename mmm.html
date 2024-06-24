@@ -61,16 +61,6 @@
           <!-- Número de canales -->
           <input type="number" class="form-control" id="m" required />
         </div>
-        <div class="form-group">
-          <label for="cw">Cw:</label>
-          <!-- Costo por unidad de tiempo de espera -->
-          <input type="number" class="form-control" id="cw" required />
-        </div>
-        <div class="form-group mb-3">
-          <label for="cs">Cs:</label>
-          <!-- Costo por unidad de tiempo de servicio -->
-          <input type="number" class="form-control" id="cs" required />
-        </div>
         <button type="submit" class="btn btn-primary">Calcular</button>
       </form>
 
@@ -88,13 +78,7 @@
         <!-- Tiempo promedio en la cola -->
         <p>W: <span id="averageTimeInSystem"></span></p>
         <!-- Tiempo promedio en el sistema -->
-        <p>Cw_total: <span id="totalWaitingCost"></span></p>
-        <!-- Costo total de espera -->
-        <p>Cs_total: <span id="totalServiceCost"></span></p>
-        <!-- Costo total de servicio -->
-        <p>CT_total: <span id="totalSystemCost"></span></p>
-        <!-- Costo total del sistema -->
-      </div>
+
     </div>
 
 
@@ -114,31 +98,22 @@
 
           document.getElementById("utilization").innerText = queue
             .utilization()
-            .toFixed(2);
+            .toFixed(4);
           document.getElementById("probabilityOfZero").innerText = queue
             .probabilityOfZero()
-            .toFixed(2);
+            .toFixed(4);
           document.getElementById("averageNumberInQueue").innerText = queue
             .averageNumberInQueue()
-            .toFixed(2);
+            .toFixed(4);
           document.getElementById("averageNumberInSystem").innerText = queue
             .averageNumberInSystem()
-            .toFixed(2);
+            .toFixed(4);
           document.getElementById("averageTimeInQueue").innerText = queue
             .averageTimeInQueue()
-            .toFixed(2);
+            .toFixed(4);
           document.getElementById("averageTimeInSystem").innerText = queue
             .averageTimeInSystem()
-            .toFixed(2);
-          document.getElementById("totalWaitingCost").innerText = queue
-            .totalWaitingCost()
-            .toFixed(2);
-          document.getElementById("totalServiceCost").innerText = queue
-            .totalServiceCost()
-            .toFixed(2);
-          document.getElementById("totalSystemCost").innerText = queue
-            .totalSystemCost()
-            .toFixed(2);
+            .toFixed(4);
         });
     </script>
   </body>
