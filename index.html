@@ -79,11 +79,11 @@
             const queue = new MM1Queue(lambda, mu);
 
             document.getElementById('utilization').innerText = queue.utilization().toFixed(2);
-            document.getElementById('averageNumberInSystem').innerText = queue.averageNumberInSystem().toFixed(2);
-            document.getElementById('averageNumberInQueue').innerText = queue.averageNumberInQueue().toFixed(2);
-            document.getElementById('averageTimeInSystem').innerText = queue.averageTimeInSystem().toFixed(2);
-            document.getElementById('averageTimeInQueue').innerText = queue.averageTimeInQueue().toFixed(2);
-            document.getElementById('probabilityOfZero').innerText = queue.probabilityOfZero().toFixed(2);
+            document.getElementById('averageNumberInSystem').innerText = queue.averageNumberInSystem().toFixed(4);
+            document.getElementById('averageNumberInQueue').innerText = queue.averageNumberInQueue().toFixed(4);
+            document.getElementById('averageTimeInSystem').innerText = queue.averageTimeInSystem().toFixed(4);
+            document.getElementById('averageTimeInQueue').innerText = queue.averageTimeInQueue().toFixed(4);
+            document.getElementById('probabilityOfZero').innerText = queue.probabilityOfZero().toFixed(4);
         });
     </script>
   </body>

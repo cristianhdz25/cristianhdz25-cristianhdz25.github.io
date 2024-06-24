@@ -4,8 +4,6 @@ class MM1Queue {
   constructor(lambda, mu) {
     this.lambda = lambda;
     this.mu = mu;
-    this.Cw = Cw;
-    this.Cs = Cs;
   }
 
   // Utilización (ρ)
@@ -46,8 +44,6 @@ class MMMQueue {
         this.lambda = lambda;
         this.mu = mu;
         this.m = m;
-        this.Cw = Cw;
-        this.Cs = Cs;
     }
 
     // Utilización (ρ)
