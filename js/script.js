@@ -1,7 +1,7 @@
 // mm1.js
 
 class MM1Queue {
-  constructor(lambda, mu, Cw, Cs) {
+  constructor(lambda, mu) {
     this.lambda = lambda;
     this.mu = mu;
     this.Cw = Cw;
@@ -38,25 +38,11 @@ class MM1Queue {
     return 1 - this.utilization();
   }
 
-  // Costo total de espera (Cw_total)
-  totalWaitingCost() {
-    return this.averageNumberInQueue() * this.Cw;
-  }
-
-  // Costo total del servicio (Cs_total)
-  totalServiceCost() {
-    return this.Cs;
-  }
-
-  // Costo total del sistema (CT_total)
-  totalSystemCost() {
-    return this.totalWaitingCost() + this.totalServiceCost();
-  }
 }
 
 
 class MMMQueue {
-    constructor(lambda, mu, m, Cw, Cs) {
+    constructor(lambda, mu, m) {
         this.lambda = lambda;
         this.mu = mu;
         this.m = m;
@@ -106,20 +92,6 @@ class MMMQueue {
         return this.averageTimeInQueue() + 1 / this.mu;
     }
 
-    // Costo total de espera (Cw_total)
-    totalWaitingCost() {
-        return this.averageNumberInQueue() * this.Cw;
-    }
-
-    // Costo total del servicio (Cs_total)
-    totalServiceCost() {
-        return this.m * this.Cs;
-    }
-
-    // Costo total del sistema (CT_total)
-    totalSystemCost() {
-        return this.totalWaitingCost() + this.totalServiceCost();
-    }
 }
 
 

@@ -75,10 +75,8 @@
 
             const lambda = parseFloat(document.getElementById('lambda').value);
             const mu = parseFloat(document.getElementById('mu').value);
-            const Cw = parseFloat(document.getElementById('cw').value);
-            const Cs = parseFloat(document.getElementById('cs').value);
 
-            const queue = new MM1Queue(lambda, mu, Cw, Cs);
+            const queue = new MM1Queue(lambda, mu);
 
             document.getElementById('utilization').innerText = queue.utilization().toFixed(2);
             document.getElementById('averageNumberInSystem').innerText = queue.averageNumberInSystem().toFixed(2);

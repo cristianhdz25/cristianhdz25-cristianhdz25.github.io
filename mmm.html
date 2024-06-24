@@ -91,10 +91,9 @@
           const lambda = parseFloat(document.getElementById("lambda").value);
           const mu = parseFloat(document.getElementById("mu").value);
           const m = parseInt(document.getElementById("m").value);
-          const Cw = parseFloat(document.getElementById("cw").value);
-          const Cs = parseFloat(document.getElementById("cs").value);
 
-          const queue = new MMMQueue(lambda, mu, m, Cw, Cs);
+
+          const queue = new MMMQueue(lambda, mu, m);
 
           document.getElementById("utilization").innerText = queue
             .utilization()
